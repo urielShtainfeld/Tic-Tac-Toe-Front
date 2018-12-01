@@ -1,0 +1,63 @@
+<div class = container>
+  <h1>Tic Tac Toe</h1>
+<div id ="player1">
+   <h1>player 1</h1>
+  <table >
+    <tr>
+      <td><span id="xPlayer" >Q</span></td>
+      <td class="vert"><span id="xPlayer" >W</span></td>
+      <td><span id="xPlayer" >E</span></td>
+    </tr>
+    <tr>
+      <td class="hori"><span id="xPlayer" >A</span></td>
+      <td class="vert hori"><span id="xPlayer" >S</span></td>
+      <td class="hori"><span id="xPlayer" >D</span></td>
+    </tr>
+    <tr>
+      <td><span id="xPlayer" >Z</span></td>
+      <td class="vert"><span id="xPlayer" >X</span></td>
+      <td><span id="xPlayer" >C</span></td>
+    </tr>
+  </table>
+</div>
+<div id ="player2">
+    <h1>player 2</h1>
+   <table >
+     <tr>
+       <td><span id="oPlayer" >7</span></td>
+       <td class="vert"><span id="oPlayer" >8</span></td>
+       <td><span id="oPlayer" >9</span></td>
+     </tr>
+     <tr>
+       <td class="hori"><span id="oPlayer" >4</span></td>
+       <td class="vert hori"><span id="oPlayer" >5</span></td>
+       <td class="hori"><span id="oPlayer" >6</span></td>
+     </tr>
+     <tr>
+       <td><span id="oPlayer" >1</span></td>
+       <td class="vert"><span id="oPlayer" >2</span></td>
+       <td><span id="oPlayer" >3</span></td>
+     </tr>
+   </table>
+ </div>
+  <table>
+    <tr>
+      <td><span id="x" *ngIf="this.xChosen[0][0]">X</span><span id="o" *ngIf="this.oChosen[0][0]">O</span></td>
+      <td class="vert"><span id="x" *ngIf="this.xChosen[0][1]">X</span><span id="o" *ngIf="this.oChosen[0][1]">O</span></td>
+      <td><span id="x" *ngIf="this.xChosen[0][2]">X</span><span id="o" *ngIf="this.oChosen[0][2]">O</span></td>
+    </tr>
+    <tr>
+      <td class="hori"><span id="x" *ngIf="this.xChosen[1][0]">X</span><span id="o" *ngIf="this.oChosen[1][0]">O</span></td>
+      <td class="vert hori"><span id="x" *ngIf="this.xChosen[1][1]">X</span><span id="o" *ngIf="this.oChosen[1][1]">O</span></td>
+      <td class="hori"><span id="x" *ngIf="this.xChosen[1][2]">X</span><span id="o" *ngIf="this.oChosen[1][2]">O</span></td>
+    </tr>
+    <tr>
+      <td><span id="x" *ngIf="this.xChosen[2][0]">X</span><span id="o" *ngIf="this.oChosen[2][0]">O</span></td>
+      <td class="vert"><span id="x" *ngIf="this.xChosen[2][1]">X</span><span id="o" *ngIf="this.oChosen[2][1]">O</span></td>
+      <td><span id="x" *ngIf="this.xChosen[2][2]">X</span><span id="o" *ngIf="this.oChosen[2][2]">O</span></td>
+    </tr>
+  </table>
+    <br>
+    <br>
+    <button id="initGame" type="button" class="btn btn-outline-warning" (click)="initGame()" >init game</button>
+</div>

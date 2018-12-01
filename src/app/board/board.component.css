@@ -1,0 +1,55 @@
+h1 {
+    text-align: center;
+  }
+  td {
+    width: 100px;
+    height: 100px;
+  }
+  table {
+    margin: 5px auto;
+  }
+  .vert {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+  }
+  .hori {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+  #x {
+    margin-left: 15px ;
+    font-weight: bold;
+    font-size: 95px; 
+    color: rgb(255, 238, 0);
+  }
+  #o {
+    margin-left: 15px ;
+    font-weight: bold;
+    font-size: 95px; 
+    color: darkblue;
+  }
+  #player1 {
+    position: absolute;
+    left: 10%;
+  }
+  #player2 {
+    position: absolute;
+    right: 10%;
+  }
+  button{
+    margin:auto;
+    display:block;
+  }
+  #xPlayer {
+    margin-left: 15px ;
+    font-weight: bold;
+    font-size: 70px; 
+    color: rgb(255, 238, 0);
+  }
+  #oPlayer {
+    margin-left: 15px ;
+    font-weight: bold;
+    font-size: 70px; 
+    color: darkblue;
+  }
+
