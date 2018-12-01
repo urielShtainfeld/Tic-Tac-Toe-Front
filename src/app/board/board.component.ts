@@ -1,5 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { ApiService } from '../api.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { MessageComponent } from '../message/message.component';
 
 @Component({
   selector: 'app-board',
@@ -12,14 +14,16 @@ export class BoardComponent  {
   public xChosen: boolean[][];
   public oChosen: boolean[][];
 
-  constructor(private api: ApiService) {
-    this.initGame();
+  constructor(private api: ApiService, private modalService: NgbModal) {
+    this.initOArray();
+    this.initXArray();
   }
 
   public initGame() {
     console.log('initGame');
     this.initOArray();
     this.initXArray();
+    this.openMessage('סטטוס', 'המשחק התחיל מחדש');
   }
   private initXArray() {
     this.xChosen = [];
@@ -72,5 +76,9 @@ export class BoardComponent  {
     this.oChosen[x - 1][y - 1] = true;
   }
 
-
+  openMessage(hdr: string , bdy: string) {
+    const modalRef = this.modalService.open(MessageComponent);
+    modalRef.componentInstance.header = hdr;
+    modalRef.componentInstance.name = bdy;
+  }
 }
